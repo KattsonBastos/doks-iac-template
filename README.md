@@ -95,22 +95,22 @@ tofu apply plan.output
 - `do_token`: DigitalOcean API token.
 - `region`: The region to deploy resources in (default: "nyc3").
 - `cluster_name`: The name of the Kubernetes cluster.
-- `kubernetes_version`: The version of Kubernetes to use for the cluster.
+- `kubernetes_version`: The Kubernetes version you want to use
 - `node_pool_name`: The name of the node pool.
 - `node_count`: The number of nodes in the node pool (default: 1).
 - `node_size`: The size of the nodes in the node pool (default: "s-2vcpu-4gb").
 
 ## Outputs
 
-- `k8s_cluster_id`: The ID of the Kubernetes cluster.
+- `k8s_cluster_id`: The created cluster ID.
 
 ## Modules
 
 ### Kubernetes Cluster
 
-- `main.tf`: Resource definition for the Kubernetes cluster.
-- `variables.tf`: Variable definitions for the Kubernetes cluster module.
-- `outputs.tf`: Output definitions for the Kubernetes cluster module.
+- `main.tf`: Resource definition.
+- `variables.tf`: Variable definitions.
+- `outputs.tf`: Output definitions.
 
 ## License
 
