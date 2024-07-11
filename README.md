@@ -1,7 +1,19 @@
-# DigitalOcean Kubernetes Cluster with Terraform
 
-This repository contains Terraform configurations to provision a simple Kubernetes cluster on DigitalOcean using best practices such as modularization.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
 
+  <h3 align="center">DigitalOcean Kubernetes Cluster with Terraform</h3>
+
+  <!-- <p align="center">
+    Processing rides events from Kafka with Bytewax
+  </p> -->
+</div>
+
+<br>
+<p align="justify">
+&ensp;&ensp;&ensp;&ensp;This repository contains Terraform configurations to provision a simple Kubernetes cluster on DigitalOcean using best practices such as modularization.
+</p>
 
 
 ## Directory Structure
