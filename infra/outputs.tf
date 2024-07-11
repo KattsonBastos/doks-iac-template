@@ -1,4 +1,4 @@
 output "k8s_cluster_id" {
-  description = "The ID of the Kubernetes cluster"
+  description = "Created Cluster ID"
   value       = module.k8s_cluster.cluster_id
 }
