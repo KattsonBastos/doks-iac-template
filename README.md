@@ -27,7 +27,7 @@
 
 ## Usage
 
-**0. ⚠️ Create an Access Token and Export it as an Environemnt Variable⚠️**
+**0. ⚠️ Create an Access Token and Export it as an Environemnt Variable ⚠️**s
 First of all, we need a Token. The creation is very simple, just navigate to the API section in the Digital Ocean portal and then click on `Generate New Token`. Give it a name, select the scope (for practicing purposes, you can choose the `Full Access`.) and then `Generate Token`. Make sure to  copy and save it.
 
    Then, create and Environment variable:
@@ -42,14 +42,15 @@ First of all, we need a Token. The creation is very simple, just navigate to the
     cd doks-iac/
     ```
 
-**2. Install Opentofu and doctl (DigitalOcean's CLI)**
+**2. Install terraform and doctl (DigitalOcean's CLI)**
 
 If you're using Linux, just run this command:
 
     ```sh
     bash installs/run-all.sh
     ```
-    If you don't need these installations, just skip to the next step. If you only need one or another, just comment the specific line in the `run-all.sh` file.
+
+If you don't need these installations, just skip to the next step. If you only need one or another, just comment the specific line in the `run-all.sh` file. The terraform installation script is just a copy & paste from <a href="https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli"> this official link </a>. Please refer to the link for more details and tf isntallation updates.
 
 **3. Create the `infra/terraform.tfvars` file**
 
@@ -67,25 +68,25 @@ I left default values for the `region`, `kubernetes_version`, `node_count` and `
 **4. Initialize Terraform**
 
 ```sh
-tofu init
+terraform init
 ```
 
 Insert the Token if asked.
 
 **5. Create an Execution Plan**
 
-The command bellow creates an execution plan, showing what actions Terraform will take without making changes. the `-out` parameters allows us to save this plan in a file, so when we apply, we'll perform exactly those actions saved. If you wish, you can only run `tofu plan`.
+The command bellow creates an execution plan, showing what actions Terraform will take without making changes. the `-out` parameters allows us to save this plan in a file, so when we apply, we'll perform exactly those actions saved. If you wish, you can only run `terraform plan`.
 
 ```sh
-tofu plan -out plan.output
+terraform plan -out plan.output
 ```
 
 **6. Apply the Terraform configurations.**
 
-If didn't save the plan, just run `tofu apply`. Otherwise, run the command bellow:
+If didn't save the plan, just run `terraform apply`. Otherwise, run the command bellow:
 
 ```sh
-tofu apply plan.output
+terraform apply plan.output
 ```
 
 **7. Enter the Digital Ocean Token and then confirm the apply action.**

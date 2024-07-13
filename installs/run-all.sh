@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Installing OpenTofu
-bash tofu-install.sh
+bash terraform-install.sh
 
 
 # Installing DOCTL..
